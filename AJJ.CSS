@@ -1,0 +1,157 @@
+
+        /* Barre de navigation */
+        nav{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            position: sticky;
+            top: 0;
+          }
+          input{
+            margin: 8px 20px;
+            padding: 5px;
+            border-radius: 20px;
+            border:none;
+            background-color: white;
+            outline:none;
+          }
+          /* Fin de la barre de navigation */
+          * {
+            box-sizing: border-box;
+          }
+          
+          body {
+            margin: 0px;
+            font-family: 'segoe ui';
+          }
+          
+          .nav {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            position: relative;
+          }
+          
+          .nav > .nav-header {
+            display: inline;
+          }
+          
+          .nav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: black;
+            padding: 10px 10px 10px 10px;
+          }
+          
+          .nav > .nav-btn {
+            display: none;
+          }
+          
+          .nav > .nav-links {
+          
+            display: inline;
+          float: right;
+            font-size: 18px;
+          }
+          
+          .nav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+          }
+          
+          .nav > .nav-links > a:hover {
+            background-color: white;
+          }
+          
+          .nav > #nav-check {
+            display: none;
+          }
+          
+          @media (max-width:1000px) {
+            .nav > .nav-btn {
+              display: inline-block;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+            }
+            .nav > .nav-btn > label {
+              display: inline-block;
+              width: 50px;
+              height: 50px;
+              padding: 13px;
+            }
+            .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+              background-color: black;
+            }
+            .nav > .nav-btn > label > span {
+              display: block;
+              width: 25px;
+              height: 10px;
+              border-top: 2px solid #4d4d4d;
+            }
+            .nav > .nav-links {
+              float: right;
+              display: block;
+              width: 100%;
+              background-color: white;
+              height: 0px;
+              transition: all 0.3s ease-in;
+              overflow-y: hidden;
+              top: 50px;
+              left: 0px;
+            }
+            .nav > .nav-links > a {
+                text-align: center;
+              display: block;
+              width: 100%;
+            }
+            .nav > #nav-check:not(:checked) ~ .nav-links {
+              height: 0px;
+            }
+            .nav > #nav-check:checked ~ .nav-links {
+              height: calc(100vh - 50px);
+              overflow-y: auto;
+            }
+          }
+        
+        @media (prefers-color-scheme: dark) {
+        body {
+        background-color: #1c1c1e;
+        color: #fefefe;
+        }nav{
+            background-color:black;
+          }
+          input{
+            background-color: black;
+          }
+          .nav {
+            background-color: black;
+          }
+          .nav > .nav-header > .nav-title {
+        color: white;
+          }
+          
+        
+          
+          .nav > .nav-links > a {
+            color: white;
+            background-color: black;
+          }
+          
+          .nav > .nav-links > a:hover {
+            background-color: black;
+          }
+        
+        
+            .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+              background-color: white;
+            }
+            .nav > .nav-links {
+              background-color: black;
+            }
+        } 
